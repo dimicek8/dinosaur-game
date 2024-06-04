@@ -1,0 +1,102 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.game {
+    width: 1200px;
+    height: 400px;
+    margin: 0 auto;
+    position: relative;
+    top: 200px;
+}
+
+.background {
+    width: 1200px;
+    height: 770px;
+    position: absolute;
+    top: -230px;
+    background: url(Img/Background.jpeg);
+    animation: backgroundMove 4s linear infinite;
+}
+
+@keyframes backgroundMove {
+    0% {
+        background-position: 1920px 0;
+    }
+    100% {
+        background-position-x: 0 -1920px;
+    }
+}
+
+#dino {
+    width: 200px;
+    height: 100px;
+    position: relative;
+    background-image: url(Img/PZE.gif);
+    background-size: 200px 100px;
+    left: 300px;
+    top: 390px;
+}
+
+#cactus {
+    height: 110px;
+    width: 150px;
+    padding: 0;
+    position: absolute;
+    background-image: url(Img/Cactus.png);
+    background-size: 200px 110px;
+    top: 380px;
+    left: 550px;
+    animation: cactusMove 2.38s infinite linear;
+}
+
+@keyframes cactusMove {
+    0% {
+        left: 1090px
+    }
+    100% {
+        left: -70px
+    }
+}
+
+.road {
+    width: 1200px;
+    height: 250px;
+    position: relative;
+    top: 200px;
+    background: url(Img/Road.png);
+    animation: roadMove 2s linear infinite;
+}
+
+@keyframes roadMove {
+    0% {
+        background-position: 1000px 0;
+    }
+    100% {
+        background-position-x: 0 -1001px;
+    }
+}
+
+.jump {
+    animation: jumpMove 0.7s linear;
+}
+
+@keyframes jumpMove {
+    0% {
+        top: 390px;
+    }
+    30% {
+        top: 200px;
+    }
+    50% {
+        top: 260px;
+    }
+    80% {
+        top: 350px;
+    }
+    100% {
+        top: 390px;
+    }
+}
